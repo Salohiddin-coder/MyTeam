@@ -39,9 +39,7 @@
 
 .hero__heading {
   width: 100%;
-  max-width: 620px;
-
-  
+  max-width: 620px;  
 }
 
 .hero__title {
@@ -59,7 +57,8 @@
 .hero__text {
   display: flex;
   flex-direction: column;
-  width: 445px;
+  width: 100%;
+  max-width: 445px;
   margin-bottom: 225px;
 }
 
@@ -78,3 +77,20 @@
   line-height: 28px;
   color: #FFFFFF;
 }
+
+
+@media only screen and(max-width:768) {
+  .hero__inner {
+    flex-direction: column;
+  }
+
+  .hero__heading {    
+    font-size: 64px;
+    line-height: 56px;
+  }
+
+  .hero_span {
+    display: none;
+  }
+}
+

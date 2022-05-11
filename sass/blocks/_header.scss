@@ -1,5 +1,6 @@
 .site-header {
   background-color: #014E56;
+  padding-bottom: 56px;
 }
 
 .site-header__inner {
@@ -24,7 +25,7 @@
   line-height: 28px;
   text-decoration: none;
   color: #FFFFFF;
-
+  
   &:hover {
     color: #F67E7E;
   }
@@ -32,7 +33,8 @@
 
 .site-header__tel {
   display: inline-block;
-  margin: 73px 0;
+  margin-top: 73px;
+  margin-bottom: 73px;
   padding: 10px 32px;
   font-weight: 600;
   font-size: 18px;
@@ -48,4 +50,4 @@
 }
 
 
-// @media only screen and (max-width:)
+
