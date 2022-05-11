@@ -1,0 +1,51 @@
+.site-header {
+  background-color: #014E56;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__logo {
+  margin-right: 40px;
+}
+
+.site-header__list {
+  display: flex;
+  align-items: center;
+  @include main-list-style;
+}
+
+.site-header__page-link {
+  margin-left: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+  color: #FFFFFF;
+
+  &:hover {
+    color: #F67E7E;
+  }
+}
+
+.site-header__tel {
+  display: inline-block;
+  margin: 73px 0;
+  padding: 10px 32px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 24px;
+}
+
+.site-header__content {
+  margin-left: auto;
+}
+
+
+// @media only screen and (max-width:)
