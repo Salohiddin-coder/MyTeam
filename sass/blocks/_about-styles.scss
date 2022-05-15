@@ -5,7 +5,7 @@
   
   &::after {
     position: absolute;
-    right: calc(50% - 759px);
+    right: 0;
     bottom: 0;
     display: inline-block;
     width: 100px;
@@ -52,12 +52,6 @@
   color: #fff;
 }
 
-@media only screen and (max-width:1300px) {
-  .about::after {
-    display: none;
-  }
-}
-
 @media only screen and (max-width:768px) {
   .about__inner {
     flex-direction: column;
@@ -70,6 +64,11 @@
     text-align: center;
   }
 
+  .about__text {
+    max-width: 457px;
+    margin: 0 auto;
+  }
+
   .about__span {
     display: none;
   }
@@ -78,4 +77,12 @@
     font-size: 15px;
     text-align: center;
   }
+}
+
+@media only screen and (max-width:576px) {
+  .about__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
 }

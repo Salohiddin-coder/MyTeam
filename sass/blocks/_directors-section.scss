@@ -198,3 +198,15 @@
 .twitter-link {
   margin-right: 16px;
 }
+
+
+@media only screen and (max-width:768px) {
+  .directors::before {
+    left: calc(50% - 384px);
+  }
+
+  .directors__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
