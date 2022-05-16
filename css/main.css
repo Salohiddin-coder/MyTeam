@@ -379,6 +379,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Livvic';
+  overflow-x: hidden;
 }
 
 main {
@@ -757,9 +758,15 @@ img {
 }
 
 @media only screen and (max-width: 576px) {
+  .about::after {
+    bottom: -100px;
+  }
   .about__title {
     font-size: 40px;
     line-height: 40px;
+  }
+  .about__text {
+    max-width: 327px;
   }
 }
 
@@ -771,7 +778,7 @@ img {
 .directors::before {
   position: absolute;
   top: 0;
-  left: calc(50% - 769px);
+  left: 0;
   display: inline-block;
   width: 100px;
   height: 200px;
@@ -782,7 +789,7 @@ img {
 .directors::after {
   position: absolute;
   bottom: 0;
-  right: calc(50% - 759px);
+  right: 0;
   display: inline-block;
   width: 147px;
   height: 100px;
@@ -806,11 +813,11 @@ img {
 }
 
 .directors__list {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1110px;
+  width: 100%;
+  max-width: 1110px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -818,7 +825,8 @@ img {
           justify-content: center;
 }
 
-.directors__item-one {
+.directors__item {
+  position: relative;
   margin-right: 30px;
   margin-bottom: 76px;
   padding-top: 32px;
@@ -828,107 +836,34 @@ img {
   background-color: #012F34;
 }
 
-.directors__item-one::after {
-  position: absolute;
-  left: 150px;
-  top: 225px;
-  display: inline-block;
-  width: 56px;
-  height: 56px;
-  background-image: url("../../images/plus-img.png");
-  content: '';
+.directors__item:nth-child(3) {
+  margin-right: 0;
 }
 
-.directors__item-two {
-  margin-right: 30px;
-  padding-top: 32px;
-  width: 350px;
-  height: 253px;
-  text-align: center;
-  background-color: #012F34;
-}
-
-.directors__item-two::after {
-  position: absolute;
-  top: 225px;
-  right: 525px;
-  display: inline-block;
-  width: 56px;
-  height: 56px;
-  background-image: url("../../images/plus-img.png");
-  content: '';
-}
-
-.directors__item-three {
-  padding-top: 32px;
-  width: 350px;
-  height: 253px;
-  text-align: center;
-  background-color: #012F34;
-}
-
-.directors__item-three::after {
-  position: absolute;
-  top: 225px;
-  right: 145px;
-  display: inline-block;
-  width: 56px;
-  height: 56px;
-  background-image: url("../../images/plus-img.png");
-  content: '';
-}
-
-.directors__item-four {
-  margin-right: 30px;
-  padding-top: 32px;
-  width: 350px;
-  height: 253px;
-  text-align: center;
-  background-color: #012F34;
-}
-
-.directors__item-four::after {
-  position: absolute;
-  bottom: -27px;
-  left: 145px;
-  display: inline-block;
-  width: 56px;
-  height: 56px;
-  background-image: url("../../images/plus-img.png");
-  content: '';
-}
-
-.directors__item-five {
-  margin-right: 30px;
-  padding-top: 32px;
-  width: 350px;
-  height: 253px;
-  text-align: center;
-  background-color: #012F34;
-}
-
-.directors__item-five::after {
-  position: absolute;
-  bottom: -27px;
-  left: 530px;
-  display: inline-block;
-  width: 56px;
-  height: 56px;
-  background-image: url("../../images/plus-img.png");
-  content: '';
-}
-
-.directors__item-six {
+.directors__item:nth-child(6) {
+  position: relative;
+  margin-right: 0;
   padding-top: 32px;
   padding-right: 48px;
   padding-left: 48px;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 253px;
   text-align: center;
   background-color: #002529;
 }
 
-.directors__item-six::after {
+.directors_items {
+  position: absolute;
+  bottom: -27px;
+  right: 145px;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  background-image: url("../../images/plus-img.png");
+}
+
+.directors_items-x {
   position: absolute;
   bottom: -27px;
   right: 145px;
@@ -936,7 +871,6 @@ img {
   width: 56px;
   height: 56px;
   background-image: url("../../images/x-img.png");
-  content: '';
 }
 
 .directors__name {
@@ -970,12 +904,26 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
-  .directors::before {
-    left: calc(50% - 384px);
-  }
   .directors__title {
     font-size: 32px;
     line-height: 32px;
+  }
+  .directors__list {
+    width: 600px;
+  }
+  .directors_item {
+    max-width: 281px;
+    margin-right: 11px;
+    background-color: red;
+  }
+  .directors_item:nth-child(2) {
+    margin-right: 0;
+  }
+  .directors_item:nth-child(4) {
+    margin-right: 0;
+  }
+  .directors_item:nth-child(6) {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
